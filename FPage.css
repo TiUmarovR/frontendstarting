@@ -1,0 +1,49 @@
+.secondTest {
+	Color: gray;
+	background-color: blue;
+	text-align: middle;
+}
+
+.firstTest {
+	color: green;
+}
+
+.greetbox {
+	text-align: center;
+}
+
+.aboutbox {
+	margin-left: 30%;
+	width: 40%;
+}
+
+.aboutheader {
+	text-align: center;
+}
+
+.thissiteisforbox {
+	margin-left: 30%;
+	width: 40%;
+}
+
+.thissiteheader {
+	text-align: center;
+}
+
+.navigationbox {
+	margin-left: 30%;
+	width: 40%;
+}
+
+.navigationheader {
+	text-align: center;
+}
+
+.contactsbox {
+	margin-left: 30%;
+	width: 40%;
+}
+
+.contactsheader {
+	text-align: center;
+}
