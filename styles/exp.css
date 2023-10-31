@@ -1,0 +1,96 @@
+.expContainer {
+ margin-top: 100px;
+}
+
+.skillsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.skillTextHeader {
+    margin: 0 0 0 0px;
+    font-size: 30px;
+}
+
+.skillTextSecondHeader {
+    margin: 0;
+    font-size: 25px;
+}
+
+.skillsContent1 {
+    border: 1px solid black;
+    width: 20%;
+    background: url(../texture.png);
+}
+
+.skillContent1Padding {
+    padding: 20px;
+}
+
+.skillTopDashes {
+    position: absolute;
+    transform: rotate(90deg);
+    margin: -15px 0 0 9%;
+}
+
+.skillTopDashes div {
+    width: 10px;
+    background-color: black;
+    height: 1px;
+    transform: rotate(45deg);
+    margin: 5px;
+}
+
+.skillBottomDashes {
+    position: absolute;
+    transform: rotate(90deg);
+    margin: -14px 0 0 9%;
+}
+
+
+.skillBottomDashes div {
+    width: 10px;
+    background-color: black;
+    height: 1px;
+    transform: rotate(-45deg);
+    margin: 5px;
+}
+
+.skillsContentHolder {
+    margin: 20px 0 0 0;
+    text-align: right;
+}
+
+.skillsContentHolder div[class="dash"] {
+    margin: 5px 0 0 95%;
+    width: 15px;
+}
+
+.skillsContent2 {
+    margin-left: 30px;
+    border: 1px solid black;
+    width: 50%;
+    padding: 20px 40px 20px 40px;
+}
+
+.skillsContent2 p[class="skillTextHeader"] {
+    margin: 0 0 20px 20px;
+}
+
+.skillsContent2 div[class="dash"] {
+    margin: 5px 0 20px 0;
+    width: 20px;
+}
+
+.skillEducationHolder {
+    margin: 30px 0 15px 0;
+}
+
+.educationTimeTaken {
+    position: absolute;
+    margin: 20px 0 0 35%;
+    font-size: 50px;
+    color: rgb(225, 224, 224);
+}
