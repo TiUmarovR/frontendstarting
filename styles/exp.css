@@ -190,3 +190,15 @@
     margin: 0 0 0 90%;
     width: 10%;
 }
+
+.swiper-slide {
+    margin-bottom: 14%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset,90%);
+}
+
+:root {
+    --swiper-theme-color: #f06262
+}
