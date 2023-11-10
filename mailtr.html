@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <body style="margin: 0; padding: 0; min-width: 100%; background-color:#955345;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="border: 0;" bgcolor="#955345">
+                <tr>
+                    <td align="center" style="font-family: 'Roboto', Arial, Helvetica, sans-serif;">
+                        <table  cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;" bgcolor="#ffffff">
+                            <tr>
+                                <td align="center" bgcolor="#ffffff" style="padding-top: 20px; padding-bottom: 20px;">
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="180" align="center" style="font-family: 'Roboto', Arial, Helvetica, sans-serif; padding-left: 24px;">
+                                                 <a href="https://rdfgroup.ru/" style="color: #03a1eb;"><img style="width: 130px;" width="130" alt="rdfgroup" src="https://static-eu.insales.ru/files/1/407/10092951/original/logo.png"></a>
+                                            </td>
+                                            <td width="372" align="center" valign="top" style="font-family: 'Roboto', Arial, Helvetica, sans-serif;padding-right: 24px;">
+                                                <table border="0" cellpadding="0" cellspacing="0" align="right">
+                                                    <tr>
+                                                        <td align="left" style="font-weight:700;font-size:18px;color:#000000;">
+                                                            <a href="tel:88005003542" style="text-decoration: none !important; color: #000000 !important;"> 8 (800) 500-35-42</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="top" style="color: #000000; font-size: 14px; padding-top: 5px;">
+                                                            <a href="mailto:info@rdfgroup.ru" style="color: #000000; text-decoration: none;">info@rdfgroup.ru</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#ffffff" style="padding-top: 20px; padding-bottom: 20px; color: #595959;">
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="left" style="font-size: 24px; padding-right: 24px; padding-left: 24px; font-weight: 700; font-family: 'Lora','Times New Roman', Times, serif;">
+                                                Здравствуйте, {{ order.firstName }}!
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 10px; padding-left: 24px; font-weight: 300;">
+                                                Заказ №{{ order.number }} был изменен.
+        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 20px; padding-right: 24px; padding-top: 15px; padding-left: 24px; font-weight: 700;font-family: 'Lora','Times New Roman', Times, serif;">
+                                                Информация о заказе
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 10px; padding-left: 24px; font-weight: 300;">
+                                                Номер заказа: {{ order.number }} от {{ order.createdAt|date("d.m.Y H:i") }}.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;">
+                                                Имя: {{ order.firstName }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;">
+                                                 Email: <a href="#" style="color: #000000 !important; text-decoration: none !important; cursor: text !important;"onlick="return false;">{{ order.email }}</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;">
+                                                 Телефон: <a href="#" style="color: #000000 !important; text-decoration: none !important; cursor: text !important;" onlick="return false;">{{ order.phone }}</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;">
+                                                 Тип доставки: {{ order.deliveryType }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;">
+                                                Служба доставки: {{ order.deliveryService }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;">
+                                                 Магазин: {{ order.site }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;">
+                                                Адрес: {{ order.deliveryAddress }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#ffffff" style="padding-bottom: 20px;">
+                                    <table width="552" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="138" align="left" style="font-size: 13px; color: #595959; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px;">Товары
+                                            </td>
+                                            <td width="204" align="left" style="font-size: 13px; color: #595959; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px;">
+                                            </td>
+                                            <td width="70" align="left" style="font-size: 13px; color: #595959; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px;">Цена
+                                            </td>
+                                            <td width="70" align="left" style="font-size: 13px; color: #595959; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px;">Количество 
+                                            </td>
+                                            <td width="70" align="left" style="font-size: 13px; color: #595959; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px;">Итого
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="138" align="left" style="font-size: 13px; color: #595959; padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #d0d0d0;"><img style="max-width: 138px;" src="{{ opr.offer.product.imageUrl }}" alt="">
+                                            </td>
+                                            <td width="204" align="left" style="font-size: 13px;color: #595959; padding-top: 10px; padding-bottom: 10px;  border-bottom: 1px solid #d0d0d0;">{{ opr.offer.name }}<br>
+                                                                    {{ opr.offer.description }}
+                                            </td>
+                                            <td width="70" align="left" style="font-size: 13px; color: #595959;font-weight: 700; padding-bottom: 10px;  padding-top: 10px; border-bottom: 1px solid #d0d0d0;">{{ opr.price }} руб.
+                                            </td>
+                                            <td width="70" align="left" style="font-size: 13px; color: #595959; padding-top: 10px; padding-bottom: 10px;  border-bottom: 1px solid #d0d0d0;">{{ opr.quantity }} шт.
+                                            </td>
+                                            <td width="70" align="left" style="font-size: 13px; color: #595959; font-weight: 700; padding-bottom: 10px;  padding-top: 10px; border-bottom: 1px solid #d0d0d0;">{{ opr.summ }} руб.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#ffffff" style="padding-top: 20px; padding-bottom: 20px; color: #595959;">
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="left" width="138" style="font-size: 13px; padding-left: 24px; font-weight: 400;">
+                                                Стоимость доставки
+                                            </td>
+                                            <td align="left" width="414" style="font-size: 13px; padding-right: 24px; font-weight: 400;">{{ order.deliveryCost }} руб.
+        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" width="138" style="font-size: 13px; padding-left: 24px; font-weight: 700; padding-top: 10px;">
+                                                Сумма к оплате
+                                            </td>
+                                            <td align="left" width="414" style="font-size: 13px; padding-right: 24px; font-weight: 700; padding-top: 10px;">{{ order.totalSumm }} руб.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 13px; padding-right: 24px; padding-top: 5px; padding-left: 24px; font-weight: 300;" align="left">
+                                    Согласен на обработку персональных данных. <br> Настоящим подтверждаю,что ознакомлен и согласен с условиями оферты и политикой конфиденциальности.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#e5d5c8" style="padding-top: 20px; padding-bottom: 20px;">
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="left" width="380" style="padding-left: 24px;">
+                                                <table border="0" cellpadding="0" cellspacing="0" align="left">
+                                                    <tr>
+                                                        <td align="left" style="font-size:16px;color: #050100;font-weight: 400; line-height: 1.6;">
+                                                            <a href="https://rdfgroup.ru/page/oplata-i-dostavka" style="text-decoration: none !important; color: #050100 !important;">Оплата и доставка</a><br><a href="https://rdfgroup.ru/blogs/reviews/shop" style="text-decoration: none !important; color: #050100 !important;">Оставить отзыв</a><br><a href="https://rdfgroup.ru/page/kontakty" style="text-decoration: none !important; color: #050100 !important;">Контакты</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td align="left" width="172" style="font-size: 14px; padding-right: 24px; font-weight: 400; color: #6d6d6d;">
+                                                <table border="0" cellpadding="0" cellspacing="0" align="right">
+                                                    <tr>
+                                                        <td align="right" style="font-size:14px;color: #6d6d6d;font-weight: 400;">
+                                                            <a href="https://vk.com/royaldressforms" style="color: #03a1eb;"><img style="width:35px;" width="35" alt="vk" src="https://static-ru.insales.ru/files/1/810/10093354/original/vk.png"></a>
+                                                        </td>
+                                                        <td align="right" style="font-size:14px;color: #6d6d6d;font-weight: 400; padding-left: 20px; padding-right: 20px;">
+                                                            <a href="https://instagram.com/royaldressforms/" style="color: #03a1eb;"><img style="width:35px;" alt="insta" width="35" src="https://static-ru.insales.ru/files/1/809/10093353/original/insta.png"></a>
+                                                        </td>
+                                                        <td align="right" style="font-size:14px;color: #6d6d6d;font-weight: 400;">
+                                                            <a href="https://www.youtube.com/channel/UCTBBRpkyAWxhjM4Xti7TqbA/videos" style="color: #03a1eb;"><img style="width:35px;" width="35" src="https://static-ru.insales.ru/files/1/811/10093355/original/yt.png"></a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" colspan="2" style="padding-top: 15px; padding-bottom: 10px; color: #4b4138; font-size: 12px;">
+                                                 <a href="https://rdfgroup.ru/" target="_blank" style="color: #4b4138; text-decoration: none;"> www.rdfgroup.ru</a> • <a href="tel:8 (495) 646-16-19" target="_blank" style="color: #4b4138; text-decoration: none;">8 (495) 646-16-19</a> • <a href="tel:8 (800) 500-35-42" target="_blank" style="color: #4b4138; text-decoration: none;">8 (800) 500-35-42</a> • <a href="mailto:info@rdfgroup.ru" target="_blank" style="color: #4b4138; text-decoration: none;">info@rdfgroup.ru</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </body>
+    </body>
+</html>
